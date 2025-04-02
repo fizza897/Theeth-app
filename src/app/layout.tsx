@@ -3,6 +3,7 @@ import {Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import LayoutWrapper from "../../Wrapper/LayoutWrapper";
 
 
 
@@ -23,14 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       
-      <Header/>
       <body
-        className={roboto_mono.className}
-        >
+      className={roboto_mono.className}
+      >
+      <LayoutWrapper>
+      <Header/>
         {children}
-      </body>
       <Footer/>
+       </LayoutWrapper>
+      </body>
     </html>
   );
 }
