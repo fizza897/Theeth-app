@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 
 
@@ -22,16 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <div className="bg-[url(/Images/Cover.jpeg)]  w-full h-screen bg-cover  bg-no-repeat">
+       
       <Header/>
-      
       <body
         className={roboto_mono.className}
         >
         {children}
       </body>
-      </div>
-  
+      <Footer/>
     </html>
   );
 }
